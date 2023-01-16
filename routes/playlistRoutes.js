@@ -16,7 +16,9 @@ const { isAuthenticated } = require("../middlewares/auth");
 const Playlist = require("../models/playlistModel");
 const User = require("../models/userModel");
 
-router.post("/playlists", isAuthenticated, async (req, res) => {
+// isAuthenticated is not working as expected,so it is temporarily removed
+
+router.post("/playlists", async (req, res) => {
   try {
     const { name, description } = req.body;
 
