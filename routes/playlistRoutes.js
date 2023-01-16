@@ -22,7 +22,7 @@ router.post("/playlists", async (req, res) => {
   try {
     const { name, description } = req.body;
 
-    const playlistDetails = { name, description, userId: req.user.id };
+    const playlistDetails = { name, description };
 
     const createPlaylist = await Playlist.create(playlistDetails);
 
